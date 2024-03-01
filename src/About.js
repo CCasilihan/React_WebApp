@@ -3,10 +3,10 @@ import * as React from "react";
 import img1 from './images/marga.JPG';
 import img2 from './images/lils4.jpg';
 import img3 from './images/nonoy.JPG';
-import img4 from './images/sunset.jpg';
+// import img4 from './images/sunset.jpg';
 import img5 from './images/snow.JPG';
 import img6 from './images/dogie.jpg';
-import img7 from './images/tito.JPG';
+// import img7 from './images/tito.JPG';
 import img8 from './images/camera.jpg';
 // import img9 from './images/cam1.jpg';
 import img10 from './images/bird.JPG';
@@ -77,12 +77,12 @@ function About() {
       <h3 className="image-caption">Months Celebration</h3>
     </div>
   </div>
-  <div className="col">
+  {/* <div className="col">
     <div className="image-container">
       <img src={img4} alt="" className="image" />
       <h3 className="image-caption">sunset</h3>
     </div>
-  </div>
+  </div> */}
   <div className="col">
     <div className="image-container">
       <img src={img5} alt="" className="image" />
@@ -95,12 +95,12 @@ function About() {
       <h3 className="image-caption">Dogie</h3>
     </div>
   </div>
-  <div className="col">
+  {/* <div className="col">
     <div className="image-container">
       <img src={img7} alt="" className="image" />
       <h3 className="image-caption">Shower</h3>
     </div>
-  </div>
+  </div> */}
   <div className="col">
     <div className="image-container">
       <img src={img10} alt="" className="image" />
