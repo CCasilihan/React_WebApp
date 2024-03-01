@@ -1,70 +1,75 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
-import img7 from './images/cam.jpg';
-// import img14 from './images/logocam.png';
-// import img13 from './images/logocam.png';
+import React from "react";
+import './samples.js';
 
-function Home() {
-  const arrowStyles = {
-    color: 'black',
-    fontSize: '50px',
-    fontWeight: 'bold',
+const WebpageSample = () => {
+  const containerStyles = {
+    position: 'relative',
+    width: '100%',
+    height: '80vh',
+    overflow: 'hidden',
+    // backgroundColor: '#333', // Change background color
   };
 
-  const imageStyles = {
-    maxWidth: '100%',
-    maxHeight: '100%',
-    objectFit: 'cover',
+  const overlayStyles = {
+    position: 'absolute',
+    top: '30%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    textAlign: 'center',
+    color: 'white',
+    zIndex: 1,
+    fontSize: '30rem', // Increase font size to 20rem
+    fontFamily: 'Arial, sans-serif', // Change font family
+    animation: 'fadeInDown 10s ease-out', // Add animation for the overlay
   };
+  
+
+  const headingStyles = {
+    fontSize: '3rem',
+    marginBottom: '20px',
+    fontFamily: 'Impact, sans-serif', // Change font family
+    animation: 'fadeInUp 10s ease-out', // Add animation for the heading
+  };
+
+  const paragraphStyles = {
+    fontSize: '1.5rem',
+    maxWidth: '500px',
+    margin: '0 auto 30px',
+    fontFamily: 'Verdana, sans-serif', // Change font family
+    animation: 'fadeInUp 10s ease-out', // Add animation for the paragraph
+  };
+
+  // const buttonStyles = {
+  //   padding: '10px 20px',
+  //   borderRadius: '5px',
+  //   background: 'linear-gradient(to right, #4CAF50, #3BAA68)',
+  //   border: 'none',
+  //   color: 'white',
+  //   fontSize: '1.2rem',
+  //   cursor: 'pointer',
+  //   textDecoration: 'none', // Remove underline
+  //   fontFamily: 'Courier New, monospace', // Change font family
+  //   animation: 'fadeInUp 1s ease-out', // Add animation for the button
+  //   display: 'block', // Make button a block element
+  //   margin: '0 auto', // Center the button horizontally
+  //   maxWidth: '200px', // Limit button width
+  // };
 
   return (
-    <>
-      <Carousel fade prevIcon={<BsChevronLeft style={arrowStyles} />} nextIcon={<BsChevronRight style={arrowStyles} />}>
-        <Carousel.Item>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ display: 'inline-block', position: 'relative' }}>
-              <img
-                src={img7}
-                alt="Welcome"
-                style={{
-                  ...imageStyles,
-                  clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-                  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.9)',
-                  display: 'block',
-                  margin: '0 auto',
-                  filter: 'grayscale(100%)',
-                }}
-              />
-              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-                <p style={{ color: 'white', fontSize: '24px', fontFamily: 'italic', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Hi, I am Charisse Casilihan</p>
-                <p style={{ color: 'white', fontSize: '20px', fontFamily: 'italic', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Photography makes us happy. Let's take a shot!</p>
-              </div>
-            </div>
-          </div>
-        </Carousel.Item>
-      </Carousel>
-
-      <div style={{ marginTop: '50px', backgroundColor: 'rgba(0, 0, 0, 0.9)', padding: '20px', borderRadius: '10px' }} className="container">
-        <h2 style={{ textAlign: 'center', fontFamily: 'italic', fontSize: '30px', color: 'white', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-          Welcome to My Creative World
-        </h2>
-        <p style={{ textAlign: 'center', fontFamily: 'Arial', fontSize: '18px', color: 'white', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>
+    <div style={containerStyles}>
+      <div style={overlayStyles}>
+        <h1 style={headingStyles}>Hi, I am Charisse Casilihan</h1>
+        <p style={paragraphStyles}>Photography makes us happy. Let's take a shot! 
+        <br></br><br></br></p>
+        {/* <p style={{ textAlign: 'center', fontFamily: 'Arial', fontSize: '18px', color: 'white', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>
         This webpage offers a glimpse into my world, passions, and interests, 
           featuring articles on technology, creativity, and personal anecdotes. 
           Join me on a virtual adventure to explore knowledge and imagination.
-        </p>
-        {/* <div style={{ textAlign: 'center', marginTop: '30px' }}>
-          <img src={img14} alt="Logo" style={{ width: '30px', marginRight: '5px' }} />
-          <span style={{ color: 'white', fontSize: '16px' }}>Zone 2, Beberon, San Fernando Camarines Sur, Philippines</span>
-        </div>
-        <div style={{ textAlign: 'center', marginTop: '10px' }}>
-          <img src={img13} alt="Logo" style={{ width: '15px', marginRight: '5px' }} />
-          <span style={{ color: 'white', fontSize: '16px' }}>0994 922 4885</span>
-        </div> */}
+        </p> */}
+        {/* <a href="/samples" style={buttonStyles}>View Samples</a> */}
       </div>
-    </>
+    </div>
   );
-}
+};
 
-export default Home;
+export default WebpageSample;
